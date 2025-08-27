@@ -1,8 +1,8 @@
-// App.tsx  (top of file — these two lines must be first)
 import "react-native-reanimated";
 import "react-native-gesture-handler";
 
 import React, { useEffect } from "react";
+import { AppState, AppStateStatus } from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from "@react-navigation/native";
@@ -15,7 +15,7 @@ import Cover from "./src/screens/Cover";
 import Turn from "./src/screens/Turn";
 import RoundEnd from "./src/screens/RoundEnd";
 import { initDb } from "./src/db";
-import { ensureSeed, topUpIfLow } from "./src/repo/CardRepository";
+import { ensureSeed, startAutoTopUp, topUpIfLow, stopAutoTopUp } from "./src/repo/CardRepository";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +25,24 @@ export default function App() {
       await initDb();
       await ensureSeed();
       await topUpIfLow();
+      startAutoTopUp();
     })();
+
+    // pause/resume auto top-up with app state
+    const onAppStateChange = (state: AppStateStatus) => {
+      if (state === 'active') {
+        stopAutoTopUp();
+        startAutoTopUp();
+      } else {
+        stopAutoTopUp();
+      }
+    };
+    const sub = AppState.addEventListener('change', onAppStateChange);
+
+    return () => {
+      sub.remove();
+      stopAutoTopUp();
+    };
   }, []);
 
   return (

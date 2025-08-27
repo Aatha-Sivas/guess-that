@@ -6,7 +6,7 @@ export async function drawCards(params: {
   lang: string;
   category: string;
   difficulty: Difficulty;
-  count: number;
+  count?: number;
 }): Promise<Card[]> {
   const q = new URLSearchParams(params as any).toString();
   const res = await fetch(`${BASE}/api/cards/draw?${q}`);

@@ -17,36 +17,30 @@ import static ch.guessthat.records.RecordManager.*;
 public class CardReadDao {
 
     private final NamedParameterJdbcTemplate jdbc;
-    @Value("${app.config.max-draw-count}")
-    private int maxQueryCount;
 
 
     @Transactional(readOnly = true)
     public List<CardDto> drawRandom(String lang, String category, String difficulty, int count) {
-        final int limit = Math.max(1, Math.min(count, maxQueryCount));
-
         final String sql = """
             SELECT c.id, c.language, c.category, c.difficulty, c.target
             FROM cards c
             WHERE c.language = :lang AND c.category = :cat AND c.difficulty = :diff
             ORDER BY RAND()
             LIMIT %d
-            """.formatted(limit);
+            """.formatted(count);
 
         return getRow(sql, lang, category, difficulty);
     }
 
     @Transactional(readOnly = true)
     public List<CardDto> drawLatest(String lang, String category, String difficulty, int count, int offset) {
-        final int limit = Math.max(1, Math.min(count, 200));
-        final int off = Math.max(0, offset);
         final String sql = """
             SELECT c.id, c.language, c.category, c.difficulty, c.target
             FROM cards c
             WHERE c.language = :lang AND c.category = :cat AND c.difficulty = :diff
             ORDER BY c.created_at DESC
             LIMIT %d OFFSET %d
-            """.formatted(limit, off);
+            """.formatted(count, offset);
 
         return getRow(sql, lang, category, difficulty);
     }

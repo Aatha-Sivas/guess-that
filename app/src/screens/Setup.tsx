@@ -126,7 +126,7 @@ export default function Setup({ navigation }: any) {
     setFeedback(null);
     try {
       const before = await getCount(LANG, CATEGORY, DIFFICULTY);
-      const cards = await drawCards({ lang: LANG, category: CATEGORY, difficulty: DIFFICULTY, count: count });
+      const cards = await drawCards({ lang: LANG, category: CATEGORY, difficulty: DIFFICULTY});
       await insertCards(cards);
       await handleAfterInsert(before);
     } catch (e: any) {

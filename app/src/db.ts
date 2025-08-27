@@ -1,4 +1,3 @@
-// src/db.ts
 import * as SQLite from 'expo-sqlite';
 import type { Card, Difficulty } from './types';
 

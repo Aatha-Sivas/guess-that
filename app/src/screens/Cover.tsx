@@ -1,4 +1,3 @@
-// Cover.tsx
 import React, { useEffect } from 'react';
 import { Text, Pressable } from 'react-native';
 import Screen from '../components/Screen';
