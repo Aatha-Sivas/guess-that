@@ -1,0 +1,18 @@
+[
+  {
+    "id": "seed-1",
+    "language": "de-CH",
+    "category": "family",
+    "difficulty": "medium",
+    "target": "Kaffeemaschine",
+    "forbidden": ["Bohnen", "Filter", "Espresso", "Wasser", "Milch"]
+  },
+  {
+    "id": "seed-2",
+    "language": "de-CH",
+    "category": "family",
+    "difficulty": "medium",
+    "target": "Passkontrolle",
+    "forbidden": ["Flughafen", "Grenze", "Ausweis", "Schlange", "Stempel"]
+  }
+]
