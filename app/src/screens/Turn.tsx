@@ -19,6 +19,17 @@ export default function Turn({ route, navigation }: any) {
     })();
   }, [setCards]);
 
+  const retried = useRef(false);
+  useEffect(() => {
+    if (!currentCard && !retried.current) {
+      retried.current = true;
+      (async () => {
+        const more = await drawForTurn(100);
+        setCards(more);
+      })();
+    }
+  }, [currentCard, setCards]);
+
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
   useEffect(() => {
     timer.current = setInterval(() => setTimeLeft((t) => t - 1), 1000);
@@ -38,7 +49,7 @@ export default function Turn({ route, navigation }: any) {
   const forbidden = currentCard?.forbidden ?? [];
 
   return (
-    <Screen style={{  flex: 1, backgroundColor: t.bg, padding: 16 }}>
+    <Screen style={{ flex: 1, backgroundColor: t.bg, padding: 16 }}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12 }}>
         <Text style={{ color: t.text, fontWeight: '800' }}>{teamIndex === 0 ? 'Team A' : 'Team B'}</Text>
         <Text style={{ color: t.text }}>⏱ {timeLeft}s</Text>
@@ -46,15 +57,15 @@ export default function Turn({ route, navigation }: any) {
       </View>
 
       <View style={{ flex: 1, backgroundColor: t.card, borderRadius: 24, padding: 20 }}>
-        <Text style={{ color: t.text, fontSize: 24, fontWeight: '900', textAlign: 'center' }}>
+        <Text style={{ color: t.text, fontSize: 50, fontWeight: '900', textAlign: 'center' }}>
           {currentCard?.target ?? 'Lade Karten…'}
         </Text>
         <FlatList
-          style={{ marginTop: 10 }}
+          style={{ marginTop: 60 }}
           data={forbidden}
           keyExtractor={(w, i) => w + i}
           renderItem={({ item }) => (
-            <Text style={{ color: t.muted, fontSize: 18, marginVertical: 4 }}>• {item}</Text>
+            <Text style={{ color: t.muted, fontSize: 30, marginVertical: 20, alignSelf: 'center'}}>{item}</Text>
           )}
         />
       </View>

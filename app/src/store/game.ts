@@ -4,32 +4,36 @@ import type { Card } from '../types';
 type Scores = [number, number];
 
 export type Settings = {
-  secondsPerRound: number; // e.g., 90
-  totalRounds: number;     // e.g., 8
+  secondsPerRound: number;
+  totalRounds: number;
 };
 
-type GameState = {
-  // settings & round tracking
-  settings: Settings;
-  currentRound: number; // 1-based
+const fold = (s: string) =>
+  s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-  // teams / scores
+type GameState = {
+  settings: Settings;
+  currentRound: number;
+
   teamIndex: 0 | 1;
   scores: Scores;
 
-  // card queue
   currentCard?: Card;
   nextCards: Card[];
 
+  usedTargets: Set<string>; 
+  markUsed: (target: string | undefined) => void;
+  clearUsedTargets: () => void;
+
   // actions
   setSettings: (partial: Partial<Settings>) => void;
-  startGame: () => void; // resets scores + round
+  startGame: () => void;
   nextRound: () => void;
 
   setCards: (cards: Card[]) => void;
   correct: () => void;
-  skip: () => void; // opponent +1
-  passPhone: () => void; // switch team (cover screen)
+  skip: () => void;
+  passPhone: () => void;
   resetAll: () => void;
 };
 
@@ -40,6 +44,16 @@ export const useGame = create<GameState>((set, get) => ({
   teamIndex: 0,
   scores: [0, 0],
   nextCards: [],
+
+  usedTargets: new Set<string>(),
+  markUsed: (target) => {
+    if (!target) return;
+    const f = fold(target);
+    const s = new Set(get().usedTargets);
+    s.add(f);
+    set({ usedTargets: s });
+  },
+  clearUsedTargets: () => set({ usedTargets: new Set<string>() }),
 
   setSettings: (partial) =>
     set((state) => ({ settings: { ...state.settings, ...partial } })),
@@ -53,26 +67,43 @@ export const useGame = create<GameState>((set, get) => ({
       nextCards: [],
     }),
 
-  nextRound: () =>
-    set((state) => ({ currentRound: state.currentRound + 1 })),
+  nextRound: () => set((s) => ({ currentRound: s.currentRound + 1 })),
 
-  setCards: (cards) => set({ nextCards: cards, currentCard: cards[0] }),
+  setCards: (cards) => {
+    const used = get().usedTargets;
+    const filtered = cards.filter((c) => !used.has(fold(c.target)));
+    const seen = new Set<string>();
+    const unique = filtered.filter((c) => {
+      const f = fold(c.target);
+      if (seen.has(f)) return false;
+      seen.add(f);
+      return true;
+    });
+    set({ nextCards: unique, currentCard: unique[0] });
+  },
 
   correct: () => {
-    const { teamIndex, scores, nextCards } = get();
+    const { teamIndex, scores, nextCards, currentCard, markUsed } = get();
     const s: Scores = [...scores] as Scores;
     s[teamIndex] += 1;
-    const [, ...rest] = nextCards;
-    set({ scores: s, nextCards: rest, currentCard: rest[0] });
+    markUsed(currentCard?.target);
+    const rest = nextCards.slice(1);
+    const used = get().usedTargets;
+    const remaining = rest.filter((c) => !used.has(fold(c.target)));
+    set({ scores: s, nextCards: remaining, currentCard: remaining[0] });
   },
 
   skip: () => {
-    const { teamIndex, scores, nextCards } = get();
+    const { teamIndex, scores, nextCards, currentCard, markUsed } = get();
+    // skip → opponent +1
     const s: Scores = [...scores] as Scores;
     const opp = ((teamIndex + 1) % 2) as 0 | 1;
-    s[opp] += 1; // rule: skip → opponent +1
-    const [, ...rest] = nextCards;
-    set({ scores: s, nextCards: rest, currentCard: rest[0] });
+    s[opp] += 1;
+    markUsed(currentCard?.target);
+    const rest = nextCards.slice(1);
+    const used = get().usedTargets;
+    const remaining = rest.filter((c) => !used.has(fold(c.target)));
+    set({ scores: s, nextCards: remaining, currentCard: remaining[0] });
   },
 
   passPhone: () =>

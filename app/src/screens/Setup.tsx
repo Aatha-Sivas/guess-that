@@ -22,6 +22,8 @@ const LANG = 'de-CH';
 const CATEGORY = 'family';
 const DIFFICULTY: Difficulty = 'medium';
 
+const MAX_CARDS_PER_REQUEST = 50;
+
 function Stepper({
   label,
   value,
@@ -80,7 +82,8 @@ function Stepper({
 }
 
 export default function Setup({ navigation }: any) {
-  const { setSettings, startGame } = useGame();
+  const { setSettings, startGame, clearUsedTargets, } = useGame();
+  const usedCount = useGame((s) => s.usedTargets.size);
 
   const [localCount, setLocalCount] = useState<number>(0);
   const [nStr, setNStr] = useState<string>('30'); // server fetch size
@@ -102,7 +105,7 @@ export default function Setup({ navigation }: any) {
   }, []);
 
   const parseAmount = () => {
-    const count = Math.max(1, Math.min(50, parseInt(nStr || '0', 10) || 0));
+    const count = Math.max(1, Math.min(MAX_CARDS_PER_REQUEST, parseInt(nStr || '0', 10) || 0));
     setNStr(String(count));
     return count;
   };
@@ -156,6 +159,25 @@ export default function Setup({ navigation }: any) {
     navigation.replace('Cover', { teamIndex: 0 });
   };
 
+  const onClearUsed = () => {
+    Alert.alert(
+      'Verwendete Zielwörter zurücksetzen',
+      `Aktuell markiert: ${usedCount}. Möchtest du sie wirklich löschen?`,
+      [
+        { text: 'Abbrechen', style: 'cancel' },
+        {
+          text: 'Löschen',
+          style: 'destructive',
+          onPress: async () => {
+            clearUsedTargets();
+            setFeedback('Verwendete Zielwörter wurden zurückgesetzt.');
+            await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          },
+        },
+      ]
+    );
+  };
+
   return (
     <Screen style={{ flex: 1, backgroundColor: t.bg, alignItems: 'center', justifyContent: 'center', padding: 20 }}>
       <Text style={{ color: t.text, fontSize: 22, fontWeight: '800', marginBottom: 6 }}>Schnelleinstellungen</Text>
@@ -169,22 +191,22 @@ export default function Setup({ navigation }: any) {
 
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
         <Text style={{ color: t.text, fontWeight: '700' }}>Lokaler Kartenbestand</Text>
-        <Text style={{ color: t.muted, marginTop: 0, marginLeft: 12}}>{localCount} Karten</Text>
+        <Text style={{ color: t.muted, marginTop: 0, marginLeft: 12 }}>{localCount} Karten</Text>
         <Pressable
-            onPress={refreshCount}
-            style={{
-              marginLeft: 12,
-              borderWidth: 1,
-              borderColor: '#444',
-              borderRadius: 10,
-              paddingHorizontal: 12,
-              paddingVertical: 8,
-            }}
-          >
-            <Text style={{ color: t.text }}>Aktualisieren</Text>
-          </Pressable>
+          onPress={refreshCount}
+          style={{
+            marginLeft: 12,
+            borderWidth: 1,
+            borderColor: '#444',
+            borderRadius: 10,
+            paddingHorizontal: 12,
+            paddingVertical: 8,
+          }}
+        >
+          <Text style={{ color: t.text }}>Aktualisieren</Text>
+        </Pressable>
       </View>
-      
+
 
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
         <Text style={{ color: t.text, marginRight: 10 }}>Anzahl laden (max 50):</Text>
@@ -244,12 +266,31 @@ export default function Setup({ navigation }: any) {
 
       <View style={{ height: 20 }} />
 
-      <Pressable
-        onPress={onStart}
-        style={{ backgroundColor: t.primary, padding: 14, borderRadius: 16, alignSelf: 'flex-start' }}
-      >
-        <Text style={{ color: '#fff', fontWeight: '700' }}>Spiel starten</Text>
-      </Pressable>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 10 }}>
+        <Pressable
+          onPress={onStart}
+          style={{ 
+            backgroundColor: t.primary, 
+            padding: 14, 
+            borderRadius: 14,
+            flex: 1,
+            alignItems: 'center' }}
+        >
+          <Text style={{ color: '#fff', fontWeight: '700' }}>Spiel starten</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={onClearUsed}
+          style={{ 
+            backgroundColor: t.danger,
+            padding: 14,
+            borderRadius: 14, 
+            flex: 1,
+            alignItems: 'center' }}
+        >
+         <Text style={{ color: t.text, fontWeight: '700' }}>Zielwörter Zurücksetzen</Text>
+        </Pressable>
+      </View>
     </Screen>
   );
 }
