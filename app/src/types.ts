@@ -8,3 +8,7 @@ export type Card = {
     target: string;
     forbidden: string[];
 };
+
+export type TrashCard = Card & {
+    deletedAt: number;        // unix timestamp (seconds)
+};

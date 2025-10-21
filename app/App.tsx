@@ -14,6 +14,9 @@ import Setup from "./src/screens/Setup";
 import Cover from "./src/screens/Cover";
 import Turn from "./src/screens/Turn";
 import RoundEnd from "./src/screens/RoundEnd";
+import CardLibrary from "./src/screens/CardLibrary";
+import CardDetail from "./src/screens/CardDetail";
+import Trash from "./src/screens/Trash";
 import { initDb } from "./src/db";
 import { ensureSeed, startAutoTopUp, topUpIfLow, stopAutoTopUp } from "./src/repo/CardRepository";
 
@@ -53,6 +56,9 @@ export default function App() {
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Setup" component={Setup} />
+            <Stack.Screen name="CardLibrary" component={CardLibrary} />
+            <Stack.Screen name="CardDetail" component={CardDetail} />
+            <Stack.Screen name="Trash" component={Trash} />
             <Stack.Screen name="Cover" component={Cover} />
             <Stack.Screen name="Turn" component={Turn} />
             <Stack.Screen name="RoundEnd" component={RoundEnd} />

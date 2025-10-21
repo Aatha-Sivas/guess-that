@@ -266,10 +266,28 @@ export default function Setup({ navigation }: any) {
 
       <View style={{ height: 20 }} />
 
+      <Pressable
+        onPress={() => navigation.navigate('CardLibrary')}
+        style={{
+          alignSelf: 'stretch',
+          width: '100%',
+          backgroundColor: t.card,
+          padding: 14,
+          borderRadius: 14,
+          alignItems: 'center',
+          borderWidth: 1,
+          borderColor: '#333',
+          marginBottom: 16,
+        }}
+      >
+        <Text style={{ color: t.text, fontWeight: '700' }}>Geladene Karten anzeigen</Text>
+        <Text style={{ color: t.muted, fontSize: 12, marginTop: 4 }}>Bearbeite lokal gespeicherte Karten</Text>
+      </Pressable>
+
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 10 }}>
         <Pressable
           onPress={onStart}
-          style={{ 
+          style={{
             backgroundColor: t.primary, 
             padding: 14, 
             borderRadius: 14,
