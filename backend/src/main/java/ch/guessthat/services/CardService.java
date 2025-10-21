@@ -36,7 +36,7 @@ public class CardService {
 
     public List<CardDto> getOrGenerate(String lang, String category, String difficulty, int count) throws IOException {
         log.info("GEN start model={} lang={} cat={} diff={} count={}", props.getModel(), lang, category, difficulty, count);
-        int batch = Math.max(count, maxGenCount);
+        int batch = Math.min(count, maxGenCount);
 
         CardBatch batchOut = requestBatch(lang, category, difficulty, batch);
 
