@@ -17,6 +17,7 @@ import RoundEnd from "./src/screens/RoundEnd";
 import CardLibrary from "./src/screens/CardLibrary";
 import CardDetail from "./src/screens/CardDetail";
 import Trash from "./src/screens/Trash";
+import CreateCard from "./src/screens/CreateCard";
 import { initDb } from "./src/db";
 import { ensureSeed, startAutoTopUp, topUpIfLow, stopAutoTopUp } from "./src/repo/CardRepository";
 
@@ -58,6 +59,7 @@ export default function App() {
             <Stack.Screen name="Setup" component={Setup} />
             <Stack.Screen name="CardLibrary" component={CardLibrary} />
             <Stack.Screen name="CardDetail" component={CardDetail} />
+            <Stack.Screen name="CreateCard" component={CreateCard} />
             <Stack.Screen name="Trash" component={Trash} />
             <Stack.Screen name="Cover" component={Cover} />
             <Stack.Screen name="Turn" component={Turn} />

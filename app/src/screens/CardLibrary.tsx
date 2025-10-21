@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -6,6 +6,7 @@ import {
   Pressable,
   RefreshControl,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
@@ -87,6 +88,7 @@ export default function CardLibrary({ navigation }: any) {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('')
 
   const loadCards = useCallback(async () => {
     const data = await getAllCards();
@@ -133,6 +135,15 @@ export default function CardLibrary({ navigation }: any) {
     [navigation]
   );
 
+  const filteredCards = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) {
+      return cards;
+    }
+
+    return cards.filter((card) => card.target.toLowerCase().trim().includes(query));
+  }, [cards, searchQuery]);
+  
   return (
     <Screen style={{ flex: 1, backgroundColor: t.bg, padding: 20 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
@@ -151,6 +162,20 @@ export default function CardLibrary({ navigation }: any) {
         </Pressable>
         <Text style={{ color: t.text, fontSize: 22, fontWeight: '800', flex: 1 }}>Meine Karten</Text>
         <Pressable
+          onPress={() => navigation.navigate('CreateCard')}
+          style={{
+            paddingVertical: 8,
+            paddingHorizontal: 12,
+            borderRadius: 10,
+            borderWidth: 1,
+            borderColor: '#333',
+            marginRight: 12,
+          }}
+          accessibilityLabel="Neue Karte erstellen"
+        >
+          <Text style={{ color: t.text, fontSize: 20, fontWeight: '800' }}>＋</Text>
+        </Pressable>
+        <Pressable
           onPress={() => navigation.navigate('Trash')}
           style={{
             paddingVertical: 8,
@@ -158,19 +183,41 @@ export default function CardLibrary({ navigation }: any) {
             borderRadius: 10,
             borderWidth: 1,
             borderColor: '#333',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
+          accessibilityLabel="Papierkorb öffnen"
         >
-          <Text style={{ color: t.text }}>Papierkorb</Text>
+          <Text style={{ color: t.text, fontSize: 20 }}>🗑️</Text>
         </Pressable>
       </View>
 
+      <View style={{ marginBottom: 16 }}>
+        <TextInput
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+          placeholder="Karten durchsuchen…"
+          placeholderTextColor="#666"
+          autoCapitalize="none"
+          autoCorrect={false}
+          style={{
+            backgroundColor: t.card,
+            borderRadius: 12,
+            borderWidth: 1,
+            borderColor: '#333',
+            color: t.text,
+            paddingHorizontal: 12,
+            paddingVertical: 10,
+          }}
+        />
+      </View>
       {loading ? (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <ActivityIndicator size="large" color={t.primary} />
         </View>
       ) : (
         <FlatList
-          data={cards}
+          data={filteredCards}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <CardRow
@@ -198,7 +245,11 @@ export default function CardLibrary({ navigation }: any) {
           contentContainerStyle={{ paddingBottom: 40 }}
           ListEmptyComponent={() => (
             <View style={{ alignItems: 'center', marginTop: 40 }}>
-              <Text style={{ color: t.muted }}>Keine Karten gefunden.</Text>
+              <Text style={{ color: t.muted }}>
+                {cards.length === 0
+                  ? 'Keine Karten gefunden.'
+                  : 'Keine Karten entsprechen deiner Suche.'}
+              </Text>
             </View>
           )}
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={t.text} />}

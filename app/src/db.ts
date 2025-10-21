@@ -55,6 +55,12 @@ function requireDb(): SQLite.SQLiteDatabase {
   return db;
 }
 
+function generateCustomCardId(): string {
+  const timestamp = Date.now().toString(36);
+  const randomPart = Math.random().toString(36).slice(2, 10);
+  return `custom-${timestamp}-${randomPart}`;
+}
+
 async function purgeExpiredTrashInternal(database: SQLite.SQLiteDatabase): Promise<void> {
   const threshold = Math.floor(Date.now() / 1000) - TRASH_TTL_SECONDS;
   if (threshold <= 0) {
@@ -441,6 +447,57 @@ export async function getCardById(id: string): Promise<Card | null> {
     difficulty: row.difficulty as Difficulty,
     target: row.target,
     forbidden: forbidden.map((f) => f.word),
+  };
+}
+
+export async function createCustomCard(input: {
+  target: string;
+  language: string;
+  category: string;
+  difficulty: Difficulty;
+  forbidden: string[];
+}): Promise<Card> {
+  await initDb();
+  const _db = requireDb();
+
+  const id = generateCustomCardId();
+  const insertCard = await _db.prepareAsync(
+    'INSERT INTO cards(id, language, category, difficulty, target) VALUES(?,?,?,?,?)'
+  );
+  const insertForbidden = await _db.prepareAsync(
+    'INSERT INTO card_forbidden(card_id, word) VALUES(?, ?)'
+  );
+
+  const normalizedForbidden: string[] = [];
+
+  try {
+    await _db.execAsync('BEGIN');
+
+    await insertCard.executeAsync([id, input.language, input.category, input.difficulty, input.target]);
+
+    for (const word of input.forbidden) {
+      const trimmed = word.trim();
+      if (!trimmed) continue;
+      normalizedForbidden.push(trimmed);
+      await insertForbidden.executeAsync([id, trimmed]);
+    }
+
+    await _db.execAsync('COMMIT');
+  } catch (e) {
+    await _db.execAsync('ROLLBACK');
+    throw e;
+  } finally {
+    await insertCard.finalizeAsync();
+    await insertForbidden.finalizeAsync();
+  }
+
+  return {
+    id,
+    language: input.language,
+    category: input.category,
+    difficulty: input.difficulty,
+    target: input.target,
+    forbidden: normalizedForbidden,
   };
 }
 
