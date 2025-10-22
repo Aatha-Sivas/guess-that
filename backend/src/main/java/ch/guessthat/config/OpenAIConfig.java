@@ -13,7 +13,7 @@ public class OpenAIConfig {
     public OpenAIClient openAIClient(OpenAIProperties props) {
         return OpenAIOkHttpClient.builder()
                 .fromEnv()
-                .timeout(Duration.ofSeconds(60))
+                .timeout(Duration.ofSeconds(props.getTimeoutSeconds()))
                 .maxRetries(3)
                 .build();
     }

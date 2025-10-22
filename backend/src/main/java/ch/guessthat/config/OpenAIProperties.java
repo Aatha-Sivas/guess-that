@@ -16,4 +16,5 @@ public class OpenAIProperties {
     private String project;
     private String model = ChatModel.GPT_5_MINI.asString();
     private Integer maxOutputTokens = 128000;
+    private Integer timeoutSeconds = 120;
 }
