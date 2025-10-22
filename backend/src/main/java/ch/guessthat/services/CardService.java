@@ -86,7 +86,6 @@ public class CardService {
         StructuredResponseCreateParams<CardBatch> requestBuilder = ResponseCreateParams.builder()
                 .model(props.getModel())
                 .input(getPrompt(lang, category, difficulty, count))
-                .temperature(props.getTemperature().floatValue())
                 .text(CardBatch.class)
                 .build();
 

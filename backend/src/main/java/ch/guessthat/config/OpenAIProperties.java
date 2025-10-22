@@ -1,6 +1,7 @@
 package ch.guessthat.config;
 
 
+import com.openai.models.ChatModel;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,6 @@ public class OpenAIProperties {
     private String apiKey;
     private String organization;
     private String project;
-    private String model = "gpt-4.1-mini";
-    private Double temperature = 0.2;
-    private Integer maxOutputTokens = 1200;
+    private String model = ChatModel.GPT_5_MINI.asString();
+    private Integer maxOutputTokens = 128000;
 }
