@@ -19,7 +19,8 @@ export function initDb(): Promise<void> {
         language TEXT NOT NULL,
         category TEXT NOT NULL,
         difficulty TEXT NOT NULL,
-        target TEXT NOT NULL
+        target TEXT NOT NULL,
+        norm_target TEXT NOT NULL
       );
 
       CREATE TABLE IF NOT EXISTS card_forbidden(
@@ -29,6 +30,9 @@ export function initDb(): Promise<void> {
 
       CREATE INDEX IF NOT EXISTS idx_cards_lcd
         ON cards(language, category, difficulty);
+
+      CREATE INDEX IF NOT EXISTS idx_cards_lcd_norm
+        ON cards(language, category, difficulty, norm_target);
         
       CREATE TABLE IF NOT EXISTS trash_cards(
         id TEXT PRIMARY KEY,
@@ -36,6 +40,7 @@ export function initDb(): Promise<void> {
         category TEXT NOT NULL,
         difficulty TEXT NOT NULL,
         target TEXT NOT NULL,
+        norm_target TEXT NOT NULL,
         deleted_at INTEGER NOT NULL
       );
 
@@ -44,6 +49,9 @@ export function initDb(): Promise<void> {
         word TEXT NOT NULL
       );
     `);
+
+    await ensureCardsNormTargetColumn(db);
+    await ensureTrashCardsNormTargetColumn(db);
     
     await purgeExpiredTrashInternal(db);
   })();
@@ -59,6 +67,69 @@ function generateCustomCardId(): string {
   const timestamp = Date.now().toString(36);
   const randomPart = Math.random().toString(36).slice(2, 10);
   return `custom-${timestamp}-${randomPart}`;
+}
+
+const DIACRITIC_PATTERN = /\p{M}+/gu;
+
+function normalizeTarget(text: string): string {
+  if (!text) {
+    return '';
+  }
+  const normalized = text.normalize('NFKC');
+  const withoutMarks = normalized.replace(DIACRITIC_PATTERN, '');
+  return withoutMarks.toLowerCase().trim();
+}
+
+async function ensureCardsNormTargetColumn(database: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await database.getAllAsync<{ name: string }>('PRAGMA table_info(cards)');
+  const hasNorm = columns.some((column) => column.name === 'norm_target');
+  if (!hasNorm) {
+    await database.execAsync('ALTER TABLE cards ADD COLUMN norm_target TEXT');
+  }
+
+  const rowsNeedingUpdate = await database.getAllAsync<{
+    id: string;
+    target: string;
+  }>('SELECT id, target FROM cards WHERE norm_target IS NULL');
+
+  if (!rowsNeedingUpdate.length) {
+    return;
+  }
+
+  const updateStmt = await database.prepareAsync('UPDATE cards SET norm_target=? WHERE id=?');
+  try {
+    for (const row of rowsNeedingUpdate) {
+      await updateStmt.executeAsync([normalizeTarget(row.target), row.id]);
+    }
+  } finally {
+    await updateStmt.finalizeAsync();
+  }
+}
+
+async function ensureTrashCardsNormTargetColumn(database: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await database.getAllAsync<{ name: string }>('PRAGMA table_info(trash_cards)');
+  const hasNorm = columns.some((column) => column.name === 'norm_target');
+  if (!hasNorm) {
+    await database.execAsync('ALTER TABLE trash_cards ADD COLUMN norm_target TEXT');
+  }
+
+  const rowsNeedingUpdate = await database.getAllAsync<{
+    id: string;
+    target: string;
+  }>('SELECT id, target FROM trash_cards WHERE norm_target IS NULL');
+
+  if (!rowsNeedingUpdate.length) {
+    return;
+  }
+
+  const updateStmt = await database.prepareAsync('UPDATE trash_cards SET norm_target=? WHERE id=?');
+  try {
+    for (const row of rowsNeedingUpdate) {
+      await updateStmt.executeAsync([normalizeTarget(row.target), row.id]);
+    }
+  } finally {
+    await updateStmt.finalizeAsync();
+  }
 }
 
 async function purgeExpiredTrashInternal(database: SQLite.SQLiteDatabase): Promise<void> {
@@ -96,10 +167,9 @@ export async function getCount(
 }
 
 /**
- * Insert cards from server. If a card already exists:
- *  - keep the card row (INSERT OR IGNORE)
- *  - REPLACE its forbidden words with the server list (delete then insert)
- * This keeps local data in sync with the backend and prevents duplicates.
+ * Insert cards from server. Cards are deduplicated by normalized target within
+ * the same language/category/difficulty bucket. Existing rows are updated and
+ * their forbidden words replaced to mirror the server payload.
  */
 export async function insertCards(cards: Card[]): Promise<void> {
   if (!cards.length) return;
@@ -108,7 +178,10 @@ export async function insertCards(cards: Card[]): Promise<void> {
 
   // prepared statements
   const insertCard = await _db.prepareAsync(
-    'INSERT OR IGNORE INTO cards(id, language, category, difficulty, target) VALUES(?,?,?,?,?)'
+     'INSERT OR IGNORE INTO cards(id, language, category, difficulty, target, norm_target) VALUES(?,?,?,?,?,?)'
+  );
+  const updateCard = await _db.prepareAsync(
+    'UPDATE cards SET language=?, category=?, difficulty=?, target=?, norm_target=? WHERE id=?'
   );
   // OR IGNORE prevents dupes if the same word appears twice in the payload
   const insertForbidden = await _db.prepareAsync(
@@ -119,23 +192,54 @@ export async function insertCards(cards: Card[]): Promise<void> {
     await _db.execAsync('BEGIN');
 
     for (const c of cards) {
-      // did this card already exist?
-      const exists = await _db.getFirstAsync<{ x: number }>(
-        'SELECT 1 as x FROM cards WHERE id=?',
-        [c.id]
+      const normTarget = normalizeTarget(c.target);
+
+      const existingByNorm = await _db.getFirstAsync<{ id: string }>(
+        'SELECT id FROM cards WHERE language=? AND category=? AND difficulty=? AND norm_target=?',
+        [c.language, c.category, c.difficulty, normTarget]
       );
 
-      // insert the card row if new (ignored if already present)
-      await insertCard.executeAsync([c.id, c.language, c.category, c.difficulty, c.target]);
+      let cardId: string;
 
-      // if it existed, wipe its forbidden list to mirror the server exactly
-      if (exists) {
-        await _db.runAsync('DELETE FROM card_forbidden WHERE card_id=?', [c.id]);
+      if (existingByNorm) {
+        cardId = existingByNorm.id;
+        await updateCard.executeAsync([
+          c.language,
+          c.category,
+          c.difficulty,
+          c.target,
+          normTarget,
+          cardId,
+        ]);
+      } else {
+        const existingById = await _db.getFirstAsync<{ id: string }>('SELECT id FROM cards WHERE id=?', [c.id]);
+        if (existingById) {
+          cardId = existingById.id;
+          await updateCard.executeAsync([
+            c.language,
+            c.category,
+            c.difficulty,
+            c.target,
+            normTarget,
+            cardId,
+          ]);
+        } else {
+          cardId = c.id;
+          await insertCard.executeAsync([
+            cardId,
+            c.language,
+            c.category,
+            c.difficulty,
+            c.target,
+            normTarget,
+          ]);
+        }
       }
 
-      // insert the current forbidden set
+      await _db.runAsync('DELETE FROM card_forbidden WHERE card_id=?', [c.id]);
+
       for (const w of c.forbidden) {
-        await insertForbidden.executeAsync([c.id, w]);
+        await insertForbidden.executeAsync([cardId, w]);
       }
     }
 
@@ -145,6 +249,7 @@ export async function insertCards(cards: Card[]): Promise<void> {
     throw e;
   } finally {
     await insertCard.finalizeAsync();
+    await updateCard.finalizeAsync();
     await insertForbidden.finalizeAsync();
   }
 }
@@ -269,7 +374,7 @@ export async function deleteCard(id: string): Promise<void> {
   );
 
   const insertTrashCard = await _db.prepareAsync(
-    'INSERT OR REPLACE INTO trash_cards(id, language, category, difficulty, target, deleted_at) VALUES(?,?,?,?,?,?)'
+    'INSERT OR REPLACE INTO trash_cards(id, language, category, difficulty, target, norm_target, deleted_at) VALUES(?,?,?,?,?,?,?)'
   );
   const insertTrashForbidden = await _db.prepareAsync(
     'INSERT INTO trash_card_forbidden(card_id, word) VALUES(?, ?)'
@@ -279,12 +384,14 @@ export async function deleteCard(id: string): Promise<void> {
     await _db.execAsync('BEGIN');
 
     const deletedAt = Math.floor(Date.now() / 1000);
+    const normTarget = normalizeTarget(card.target);
     await insertTrashCard.executeAsync([
       card.id,
       card.language,
       card.category,
       card.difficulty,
       card.target,
+      normTarget,
       deletedAt,
     ]);
 
@@ -333,7 +440,7 @@ export async function restoreCard(id: string): Promise<void> {
   );
 
   const insertCard = await _db.prepareAsync(
-    'INSERT OR REPLACE INTO cards(id, language, category, difficulty, target) VALUES(?,?,?,?,?)'
+    'INSERT OR REPLACE INTO cards(id, language, category, difficulty, target, norm_target) VALUES(?,?,?,?,?,?)'
   );
   const insertForbidden = await _db.prepareAsync(
     'INSERT INTO card_forbidden(card_id, word) VALUES(?, ?)'
@@ -342,12 +449,14 @@ export async function restoreCard(id: string): Promise<void> {
   try {
     await _db.execAsync('BEGIN');
 
+    const normTarget = normalizeTarget(card.target);
     await insertCard.executeAsync([
       card.id,
       card.language,
       card.category,
       card.difficulty,
       card.target,
+      normTarget,
     ]);
 
     await _db.runAsync('DELETE FROM card_forbidden WHERE card_id=?', [id]);
@@ -461,8 +570,19 @@ export async function createCustomCard(input: {
   const _db = requireDb();
 
   const id = generateCustomCardId();
+  const normTarget = normalizeTarget(input.target);
+  
+  const existing = await _db.getFirstAsync<{ id: string }>(
+    'SELECT id FROM cards WHERE language=? AND category=? AND difficulty=? AND norm_target=?',
+    [input.language, input.category, input.difficulty, normTarget]
+  );
+
+  if (existing) {
+    throw new Error('Eine Karte mit diesem Zielwort existiert bereits.');
+  }
+
   const insertCard = await _db.prepareAsync(
-    'INSERT INTO cards(id, language, category, difficulty, target) VALUES(?,?,?,?,?)'
+    'INSERT INTO cards(id, language, category, difficulty, target, norm_target) VALUES(?,?,?,?,?,?)'
   );
   const insertForbidden = await _db.prepareAsync(
     'INSERT INTO card_forbidden(card_id, word) VALUES(?, ?)'
@@ -473,7 +593,14 @@ export async function createCustomCard(input: {
   try {
     await _db.execAsync('BEGIN');
 
-    await insertCard.executeAsync([id, input.language, input.category, input.difficulty, input.target]);
+    await insertCard.executeAsync([
+      id,
+      input.language,
+      input.category,
+      input.difficulty,
+      input.target,
+      normTarget,
+    ]);
 
     for (const word of input.forbidden) {
       const trimmed = word.trim();
@@ -506,7 +633,7 @@ export async function updateCard(card: Card): Promise<void> {
   const _db = requireDb();
 
   const updateStmt = await _db.prepareAsync(
-    'UPDATE cards SET language=?, category=?, difficulty=?, target=? WHERE id=?'
+    'UPDATE cards SET language=?, category=?, difficulty=?, target=?, norm_target=? WHERE id=?'
   );
   const insertForbidden = await _db.prepareAsync(
     'INSERT INTO card_forbidden(card_id, word) VALUES(?, ?)'
@@ -515,11 +642,13 @@ export async function updateCard(card: Card): Promise<void> {
   try {
     await _db.execAsync('BEGIN');
 
+    const normTarget = normalizeTarget(card.target);
     await updateStmt.executeAsync([
       card.language,
       card.category,
       card.difficulty,
       card.target,
+      normTarget,
       card.id,
     ]);
 
