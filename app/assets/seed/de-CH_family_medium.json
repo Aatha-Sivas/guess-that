@@ -1,2340 +1,1111 @@
 [
   {
-    "id": "009a5724-ee52-4eec-b390-6bb5356f740a",
-    "language": "de-CH",
+    "id": "05ad81d1-b644-4531-8d22-9dc1881939f2",
+    "target": "Milch",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Heimwerken",
-    "forbidden": [
-      "Haus",
-      "Reparatur",
-      "Werkzeug",
-      "Bauen",
-      "Handwerk",
-      "Renovation"
-    ]
-  },
-  {
-    "id": "00a2c95b-7dff-4273-b89d-f92e971c5dd5",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Gemälde",
     "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Leinwand",
-      "Kunst",
-      "Bild"
-    ]
-  },
-  {
-    "id": "0299be79-2949-45e3-8d45-180b4e7d0f97",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Welpe",
-    "forbidden": [
-      "Hund",
-      "Tier",
-      "Bellen",
-      "Leine",
-      "Knochen",
-      "Haustier"
-    ]
-  },
-  {
-    "id": "02c60ce3-3d44-402c-b17a-440a759e8f10",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Freizeit",
-    "forbidden": [
-      "Sport",
-      "Bewegung",
-      "Spiel",
-      "Ball",
-      "Fitness",
-      "Training"
-    ]
-  },
-  {
-    "id": "03383bf0-2bb5-4c84-ab30-221c7b107937",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Waschküche",
-    "forbidden": [
-      "Haus",
-      "Familie",
-      "Wäsche",
-      "Waschen",
-      "Putzen",
-      "Ordnung"
-    ]
-  },
-  {
-    "id": "09889a11-438f-4ca0-8eb9-f8991337fbab",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kelle",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "0ade6447-9d3d-46f1-b0aa-99b8fec221d2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Hausfrau",
-    "forbidden": [
-      "Kochen",
-      "Abwasch",
-      "Putzen",
-      "Aufräumen",
-      "Haushalt",
-      "Einkaufen"
-    ]
-  },
-  {
-    "id": "0e96f722-a6ae-4959-8727-b9a45b5eda79",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Bildung",
-    "forbidden": [
-      "Bücher",
-      "Lesen",
-      "Geschichte",
-      "Wissen",
-      "Schule",
-      "Lernen"
-    ]
-  },
-  {
-    "id": "0f139dd1-9d37-4f95-b0be-d8521b4c561e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Wecker",
-    "forbidden": [
-      "Schlafen",
-      "Bett",
-      "Kissen",
-      "Decke",
-      "Nacht",
-      "Zimmer"
-    ]
-  },
-  {
-    "id": "0f51a32f-797e-4ed6-9257-56c384c7448d",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Gitarre",
-    "forbidden": [
-      "Musik",
-      "Instrument",
-      "Singen",
-      "Konzert",
-      "Lied",
-      "Ton"
-    ]
-  },
-  {
-    "id": "1109816b-692c-4155-aed6-7b0010476c04",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Matratze",
-    "forbidden": [
-      "Schlafen",
-      "Bett",
-      "Kissen",
-      "Decke",
-      "Nacht",
-      "Zimmer"
-    ]
-  },
-  {
-    "id": "11511a95-e286-4d8b-b41c-86aa11dfbe91",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schultasche",
-    "forbidden": [
-      "Schule",
-      "Lernen",
-      "Lehrer",
-      "Kinder",
-      "Tafel",
-      "Pause",
-      "Unterricht"
-    ]
-  },
-  {
-    "id": "1184f477-09d6-4023-8271-bdceb0933d29",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Muffin",
-    "forbidden": [
-      "Küche",
-      "Backen",
-      "Teig",
-      "Ofen",
-      "Süss",
-      "Kuchen"
-    ]
-  },
-  {
-    "id": "13fd4898-dc29-4662-994e-6f806bd89704",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kochtopf",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Essen",
-      "Rezept"
-    ]
-  },
-  {
-    "id": "148df1dc-005a-41c3-b3b3-bb6f2c4949f9",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schrank",
-    "forbidden": [
-      "Fenster",
+      "Weiss",
+      "Kuh",
       "Glas",
-      "Öffnen",
-      "Haus",
-      "Licht",
-      "Blick"
-    ]
-  },
-  {
-    "id": "17d31350-fa7a-42f7-8e53-d2f29e9aa939",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schlafzimmer",
-    "forbidden": [
-      "Bett",
-      "Schlafen",
-      "Traum",
-      "Nacht",
-      "Kissen",
-      "Decke"
-    ]
-  },
-  {
-    "id": "19d58732-85ee-4862-98f3-bf828bb2b6e2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Mütze",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "1b08e303-67ea-433b-b969-c3f2fb0e25ee",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kaninchen",
-    "forbidden": [
-      "Tier",
-      "Hund",
-      "Katze",
-      "Haustier",
-      "Bellen",
-      "Miau",
-      "Pfote"
-    ]
-  },
-  {
-    "id": "1c0d1dbc-3d97-45fd-a73e-9a87204fda41",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Rock",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "1c46bf71-92cf-4478-bed0-b77762e2ee5d",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Reibe",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "1e86e4cc-b3a7-43ed-a343-0d0f8df62727",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Handschuh",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "1fda5259-c4c2-4e64-9fa9-337b6f522bd5",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Besteck",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Teller",
-      "Gabel",
-      "Messer"
-    ]
-  },
-  {
-    "id": "21099732-e7ef-436b-9eb8-a8401ea3d591",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Sommer",
-    "forbidden": [
-      "Sonne",
-      "Wärme",
-      "Strand",
-      "Sand",
-      "Meer",
-      "Urlaub"
-    ]
-  },
-  {
-    "id": "21fa9da0-32ac-4532-89b8-8e3eb2713802",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Gespräch",
-    "forbidden": [
-      "Telefon",
-      "Anruf",
-      "Nachricht",
-      "Kommunikation",
-      "Sprechen",
-      "Handy"
-    ]
-  },
-  {
-    "id": "23eb504d-e7c4-4fb1-aa4e-435c17dc03f5",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Brot",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "25267dde-02b8-4386-bc1b-157325d84b68",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Dominosteine",
-    "forbidden": [
-      "Spiel",
-      "Würfel",
-      "Brett",
-      "Karten",
-      "Gewinnen",
-      "Verlieren",
-      "Ziehen"
-    ]
-  },
-  {
-    "id": "253f9f54-8029-4db6-b94a-d373ceffa0cf",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Sieb",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "2cfd6fcf-4ab4-439b-9ed7-452a32846b28",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Stiefel",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Schuhe",
-      "Füsse",
-      "Draussen",
-      "Warm"
-    ]
-  },
-  {
-    "id": "319a7f7b-53ac-4d04-8bd5-f26564844499",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Jacke",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Schrank",
-      "Mode",
-      "Stoff",
-      "Outfit"
-    ]
-  },
-  {
-    "id": "34a9f344-e2c8-46fb-9295-d68da46f463e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schlaf",
-    "forbidden": [
-      "Bett",
-      "Schlafen",
-      "Nacht",
-      "Traum",
-      "Kissen",
-      "Decke"
-    ]
-  },
-  {
-    "id": "355b8d43-a899-4691-97ee-6468ac808021",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Mahlzeit",
-    "forbidden": [
-      "Essen",
-      "Kochen",
-      "Küche",
-      "Rezept",
-      "Teller",
-      "Geschirr"
-    ]
-  },
-  {
-    "id": "35aa5ef1-9e73-465f-b1a6-72e589882255",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schulkind",
-    "forbidden": [
-      "Schule",
-      "Hausaufgaben",
-      "Lehrer",
-      "Kinder",
-      "Pausenhof",
-      "Unterricht"
-    ]
-  },
-  {
-    "id": "3827c6ef-f758-44ce-a378-21262cb36473",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "BrÄtchen",
-    "forbidden": [
       "Frühstück",
-      "Morgen",
-      "Essen",
-      "Brot",
-      "Marmelade",
-      "Kaffee"
-    ]
+      "Kaffee",
+      "Haltbar"
+    ],
+    "difficulty": "medium",
+    "norm_target": "milch"
   },
   {
-    "id": "3cb3d391-0470-4b04-92e6-35a06c111b46",
-    "language": "de-CH",
+    "id": "073d33e2-48ae-48af-8921-984028c8317b",
+    "target": "Monitor",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Lampe",
-    "forbidden": [
-      "Bett",
-      "Schlafen",
-      "Kissen",
-      "Decke",
-      "Zimmer",
-      "Nacht"
-    ]
-  },
-  {
-    "id": "3dbb9044-6ba0-4cd0-b821-bfb10a1c6cbd",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kochbuch",
     "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Rezept"
-    ]
-  },
-  {
-    "id": "406361c1-f510-48ce-b147-257168a5d53f",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Esstisch",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Essen",
-      "Teller",
-      "Besteck",
-      "Mahlzeit",
-      "Zubereiten"
-    ]
-  },
-  {
-    "id": "41f21aab-4c9f-464f-8409-7efdf49340d8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Feier",
-    "forbidden": [
-      "Kuchen",
-      "Geburtstag",
-      "Kerzen",
-      "Feiern",
-      "Geschenk",
-      "Party"
-    ]
-  },
-  {
-    "id": "44582f51-9f60-4a5d-b61b-ffc6fb8c52e7",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Spatz",
-    "forbidden": [
-      "Tier",
-      "Fliegen",
-      "Federn",
-      "Nest",
-      "Vogel",
-      "Singen",
-      "Flügel"
-    ]
-  },
-  {
-    "id": "47bda86e-8e7e-441d-8a8b-cc93132932b0",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Brief",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Buch",
-      "Lesen",
-      "Notizen",
-      "Stift"
-    ]
-  },
-  {
-    "id": "4a1b3a4e-cb6f-40c5-908d-f3a81fc4de42",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schüler",
-    "forbidden": [
-      "Schule",
-      "Lehrer",
-      "Lernen",
-      "Hausaufgaben",
-      "Pause",
-      "Freunde"
-    ]
-  },
-  {
-    "id": "4b8eff42-5286-42ef-afc3-986eea26e037",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Ei",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "4c6ef251-5384-4987-a99b-ad1aa60f8b6c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Taube",
-    "forbidden": [
-      "Tier",
-      "Fliegen",
-      "Federn",
-      "Nest",
-      "Vogel",
-      "Singen",
-      "Flügel"
-    ]
-  },
-  {
-    "id": "4d024a59-a22b-4d24-8ade-0a7f36e06c15",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Party",
-    "forbidden": [
-      "Feiern",
-      "Geburtstag",
-      "Geschenk",
-      "Kerzen",
-      "Torte",
-      "Freude"
-    ]
-  },
-  {
-    "id": "4f454698-f844-42d6-aef5-7efab3a653ab",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Notizblock",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Stift",
-      "Notizen",
-      "Buch",
-      "Lesen"
-    ]
-  },
-  {
-    "id": "4f989c27-64bd-45b7-815f-633e4c439c10",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Suppenteller",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Rezept"
-    ]
-  },
-  {
-    "id": "5105046b-a15f-4d21-8d01-1ca20427f2e1",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Frühstück",
-    "forbidden": [
-      "Essen",
-      "Kochen",
-      "Familie",
-      "Tisch",
-      "Gemeinsam",
-      "Abend"
-    ]
-  },
-  {
-    "id": "517b9e39-6cb0-48c7-88ce-6b2511369574",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Mikrowelle",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Essen",
-      "Herd",
-      "Pfanne",
-      "Geschirr",
-      "Backofen"
-    ]
-  },
-  {
-    "id": "52d2ed96-5a44-44e2-a492-949477ba750e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schultag",
-    "forbidden": [
-      "Hausaufgaben",
-      "Schule",
-      "Lernen",
-      "Lehrer",
-      "Pause",
-      "Kinder"
-    ]
-  },
-  {
-    "id": "5368552f-f9f3-45fc-b788-5a5ec29718ab",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Farbstift",
-    "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Kunst",
-      "Bild",
-      "Leinwand"
-    ]
-  },
-  {
-    "id": "5377a8f8-943d-471b-ba88-9255f7a02704",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Hocker",
-    "forbidden": [
-      "Sitzen",
-      "Holz",
-      "Tisch",
-      "Zimmer",
-      "MÄbel"
-    ]
-  },
-  {
-    "id": "54f3db4e-940e-4f8c-9fe9-d1b6de482960",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Essplatz",
-    "forbidden": [
-      "Tisch",
-      "Stuhl",
-      "Essen",
-      "Familie",
-      "Treffen",
-      "Zimmer"
-    ]
-  },
-  {
-    "id": "555d9714-c1d2-4e1b-97ce-7c98f3d8f877",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Freund",
-    "forbidden": [
-      "Spiel",
-      "Kinder",
-      "Spaß",
-      "Freunde",
-      "Zeit",
-      "Lachen"
-    ]
-  },
-  {
-    "id": "5573065f-2bd7-4a9d-aa49-f2bb3d46ab08",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Leinwand",
-    "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Bild",
-      "Kunst",
-      "Papier",
-      "Zeichnen"
-    ]
-  },
-  {
-    "id": "5915cdb3-570e-43f8-82a9-444f5c2df339",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Staffelei",
-    "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Leinwand",
-      "Kunst"
-    ]
-  },
-  {
-    "id": "5a440593-4f73-48ee-823c-83f266ac90fd",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Fest",
-    "forbidden": [
-      "Weihnachten",
-      "Geschenke",
-      "Tannenbaum",
-      "Feiern",
-      "Familie",
-      "Winter"
-    ]
-  },
-  {
-    "id": "5e10a48f-d53c-446c-8325-ae3f792c136f",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Backform",
-    "forbidden": [
-      "Küche",
-      "Backen",
-      "Teig",
-      "Ofen",
-      "Süss",
-      "Kuchen"
-    ]
-  },
-  {
-    "id": "5f47a216-f179-4189-aada-06d3a850aa18",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Sessel",
-    "forbidden": [
-      "Stuhl",
-      "Sitzen",
-      "Holz",
-      "Tisch",
-      "MÄbel",
-      "Zimmer"
-    ]
-  },
-  {
-    "id": "613e1a91-6559-4f17-85f5-e8004b98594f",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Dunstabzug",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Herd",
-      "Topf",
-      "Pfanne"
-    ]
-  },
-  {
-    "id": "63bf5b44-02aa-4559-b9f4-c054bee783ee",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kleider",
-    "forbidden": [
-      "Kleidung",
-      "Waschen",
-      "Schrank",
-      "Anziehen",
-      "Mode",
-      "Stoff"
-    ]
-  },
-  {
-    "id": "64640c77-f1b3-4ee7-b668-a5507cbeed3b",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Lexikon",
-    "forbidden": [
-      "Buch",
-      "Lesen",
-      "Seite",
-      "Geschichte",
-      "Autor"
-    ]
-  },
-  {
-    "id": "66e14955-2ad1-4937-aa11-12612f6fe94c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schal",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "67577df6-db37-4c4d-a99e-e1c8fa8a9457",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Palette",
-    "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Kunst",
-      "Bild",
-      "Leinwand"
-    ]
-  },
-  {
-    "id": "69420433-b69a-4aa2-ae3a-2d307eaba0e8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Gabel",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "6d619651-0dc4-4560-bad2-9c033f2586ac",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Krug",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Trinken",
-      "Glas",
-      "Flasche",
-      "Getränk"
-    ]
-  },
-  {
-    "id": "6db6b7aa-ed9b-4c63-9cfd-2b8ca0a90978",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Renovation",
-    "forbidden": [
-      "Haus",
-      "Reparatur",
-      "Werkzeug",
-      "Schrauben",
-      "Bauen",
-      "Handwerk"
-    ]
-  },
-  {
-    "id": "6e0d0c89-4f4b-42e5-a070-28cb1fa73e8c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schulranzen",
-    "forbidden": [
-      "Schule",
-      "Lehrer",
-      "Tafel",
-      "Kreide",
-      "Unterricht",
-      "Kinder"
-    ]
-  },
-  {
-    "id": "6ff5b02a-ed01-4dbf-a368-5f519ef50d8b",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Mantel",
-    "forbidden": [
-      "Kleidung",
-      "Jacke",
-      "Hose",
-      "Schuhe",
-      "Anziehen",
-      "Mode"
-    ]
-  },
-  {
-    "id": "718c121a-e16a-4ce0-8c28-8e1767df7667",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kindheit",
-    "forbidden": [
-      "Kinder",
-      "Spielzeug",
-      "Spielen",
-      "Lachen",
-      "Freude",
-      "Zeit"
-    ]
-  },
-  {
-    "id": "71ae9475-0592-4fb8-a68d-1b0c9c310a2e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Vorhang",
-    "forbidden": [
-      "Fenster",
-      "Glas",
-      "Öffnen",
-      "Haus",
-      "Licht",
-      "Blick"
-    ]
-  },
-  {
-    "id": "72a8fdf5-0fa5-4958-9e65-c99ce6e7f2de",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kalender",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Stift",
-      "Notizen",
-      "Buch",
-      "Lesen"
-    ]
-  },
-  {
-    "id": "76cb8535-6314-43f9-8875-6fa103fa6744",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Stuhl",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Buch",
-      "Lesen",
-      "Notizen",
-      "Stift"
-    ]
-  },
-  {
-    "id": "7826307e-73a0-4035-be18-93931ec86cde",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Unterhaltung",
-    "forbidden": [
-      "Fernsehen",
-      "Film",
-      "Serie",
       "Bildschirm",
-      "Abend",
-      "Sofa"
-    ]
+      "PC",
+      "Auflösung",
+      "Standfuss",
+      "Kabel",
+      "Helligkeit"
+    ],
+    "difficulty": "medium",
+    "norm_target": "monitor"
   },
   {
-    "id": "7acc77f1-f1e4-4898-8875-2ed181c255b9",
-    "language": "de-CH",
+    "id": "111b7c91-ac54-4daf-840a-80a52d5c9481",
+    "target": "Lampe",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Elternteil",
-    "forbidden": [
-      "Arbeit",
-      "Chef",
-      "Geld",
-      "Büro",
-      "Kollegen",
-      "Karriere"
-    ]
-  },
-  {
-    "id": "7cdbe429-bded-4674-912e-f8321e4954f7",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Farbtube",
     "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Leinwand",
-      "Kunst"
-    ]
-  },
-  {
-    "id": "7e98b261-7b50-4c4d-b360-4436d0c26a7c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Käse",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "7fb6e4df-a7b4-45ee-a873-d8a0e5d54a00",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schürze",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "7fd6d008-7cda-4a4c-ac67-d77f1ef206d9",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Hof",
-    "forbidden": [
-      "Garten",
-      "Pflanzen",
-      "Blumen",
-      "Gras",
-      "Draussen",
-      "Spielen"
-    ]
-  },
-  {
-    "id": "8171feef-033d-474e-bd20-cdd243747d41",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Badezimmer",
-    "forbidden": [
-      "Zähneputzen",
-      "Baden",
-      "Duschen",
-      "Seife",
-      "Handtuch",
-      "Spiegel"
-    ]
-  },
-  {
-    "id": "82669c93-71fa-4acf-be98-6bd964162d22",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Tischtennis",
-    "forbidden": [
-      "Fussball",
-      "Sport",
-      "Tor",
-      "Spiel",
-      "Ball",
-      "Mannschaft",
-      "Rennen"
-    ]
-  },
-  {
-    "id": "832c7918-0cbd-485c-a36b-9afd8072a2f8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Klavier",
-    "forbidden": [
-      "Musik",
-      "Instrument",
-      "Singen",
-      "Konzert",
-      "Lied",
-      "Ton"
-    ]
-  },
-  {
-    "id": "83371523-aa97-4552-b6f2-71e33b0102c7",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Geschwister",
-    "forbidden": [
-      "Mama",
-      "Papa",
-      "Kinder",
-      "Haus",
-      "Liebe",
-      "Eltern"
-    ]
-  },
-  {
-    "id": "8417f31c-1285-47a9-be18-901127d88918",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kamm",
-    "forbidden": [
-      "Kopf",
-      "Haar",
-      "Waschen",
-      "Frisur",
-      "Styling"
-    ]
-  },
-  {
-    "id": "883b0eb5-559d-4c05-8643-c7387a2bf792",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Heft",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Buch",
-      "Lesen",
-      "Notizen",
-      "Stift"
-    ]
-  },
-  {
-    "id": "891773a3-9d6c-4106-94e8-f6a795b6d3c8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "DosenÄffner",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "8a30d96a-30a2-4bae-aa67-f6b1611d3d84",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Topf",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "8ef44560-bfe5-4de3-92b9-762d9a464251",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Wolke",
-    "forbidden": [
-      "Sonne",
-      "Himmel",
-      "Wolken",
-      "Wetter",
-      "Tag",
-      "Licht"
-    ]
-  },
-  {
-    "id": "90ae1a19-647b-4a2e-be52-122afd885c47",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Bank",
-    "forbidden": [
-      "Sitzen",
-      "Holz",
-      "Tisch",
-      "Zimmer",
-      "MÄbel"
-    ]
-  },
-  {
-    "id": "91de976e-8305-4b07-ba8c-a575ce7c339a",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Freundschaft",
-    "forbidden": [
-      "Freunde",
-      "Treffen",
-      "Spielen",
-      "Zeit",
-      "Spaß",
-      "Gemeinsam"
-    ]
-  },
-  {
-    "id": "91e855ab-793f-4ded-bf74-e7bdf6ea1549",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Salat",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Teller",
-      "Besteck",
-      "Mahlzeit",
-      "Kochen",
-      "Zubereiten"
-    ]
-  },
-  {
-    "id": "929ae3b0-ea0c-48e8-87d7-240c83656e40",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Blume",
-    "forbidden": [
-      "Haus",
-      "Garten",
-      "Pflanzen",
-      "Blumen",
-      "Grün",
-      "Natur"
-    ]
-  },
-  {
-    "id": "9305508c-e41b-42dd-85a2-c6862c522cef",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Tür",
-    "forbidden": [
-      "Fenster",
-      "Glas",
-      "Öffnen",
-      "Haus",
       "Licht",
-      "Blick"
-    ]
+      "Nacht",
+      "Glühbirne",
+      "Schreibtisch",
+      "Strom",
+      "Leuchte"
+    ],
+    "difficulty": "medium",
+    "norm_target": "lampe"
   },
   {
-    "id": "96b87dcc-6d61-4709-9fc1-618fd230d14a",
-    "language": "de-CH",
+    "id": "16952b18-ab04-43d9-8065-a4520f478cba",
+    "target": "Vorhang",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Wäsche",
-    "forbidden": [
-      "Kleidung",
-      "Waschen",
-      "Bügeln",
-      "Schrank",
-      "Ordnung",
-      "Sauber"
-    ]
-  },
-  {
-    "id": "96dd8d64-dd95-461f-9ff0-12e034a1e219",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Comic",
     "forbidden": [
-      "Buch",
-      "Lesen",
-      "Seiten",
-      "Autor",
-      "Geschichte",
-      "Kapitel",
-      "Bibliothek"
-    ]
-  },
-  {
-    "id": "96ed10ba-2ee9-4273-be5f-1842dc663705",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Beruf",
-    "forbidden": [
-      "Arbeit",
-      "Geld",
-      "Job",
-      "Büro",
-      "Chef",
-      "Kollegen"
-    ]
-  },
-  {
-    "id": "9728b798-fd4e-4f86-8f10-e1b0d44a1590",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Zahnpflege",
-    "forbidden": [
-      "Zahnarzt",
-      "Putzen",
-      "Mund",
-      "Zähne",
-      "Bürste",
-      "Gesundheit"
-    ]
-  },
-  {
-    "id": "9a06db46-0033-4ad4-aadc-a136677eebb9",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Zahnseide",
-    "forbidden": [
-      "Zahnarzt",
-      "Putzen",
-      "Mund",
-      "Zähne",
-      "Bürste",
-      "Gesundheit"
-    ]
-  },
-  {
-    "id": "9a73e514-f712-4879-a250-d0cd5aad75c5",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Wäschekorb",
-    "forbidden": [
-      "Kleidung",
-      "Waschen",
-      "Trocknen",
-      "Bügeln",
-      "Schrank",
-      "Sauber"
-    ]
-  },
-  {
-    "id": "a284de03-e202-480b-b01b-8d2db98023d5",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kuchen",
-    "forbidden": [
-      "Küche",
-      "Backen",
-      "Ofen",
-      "Teig",
-      "Süss"
-    ]
-  },
-  {
-    "id": "a2c52e62-f4fd-469d-8b25-cb05a60ed668",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Salz",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "a3af6590-2686-4cb5-9ebc-a88d5a3824b2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Briefkasten",
-    "forbidden": [
-      "Haus",
-      "Tür",
-      "Schlüssel",
-      "Aufmachen",
-      "Schloss",
-      "Eingang"
-    ]
-  },
-  {
-    "id": "a518d1af-d511-4362-a50a-2c6130715f77",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Fernseher",
-    "forbidden": [
-      "Fernsehen",
-      "Film",
-      "Serie",
-      "Abend",
-      "Sofa",
-      "Unterhaltung"
-    ]
-  },
-  {
-    "id": "a584ad3e-08b3-44b8-ae9d-91ce1c55a7f7",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Suppenkelle",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Suppentopf",
-      "LÄffel",
-      "Essen"
-    ]
-  },
-  {
-    "id": "a5bf0a17-fae1-4bba-b8bf-05e58a634d07",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Pullover",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Winter",
-      "Warm",
-      "Jacke",
-      "Mantel"
-    ]
-  },
-  {
-    "id": "a6c0ea9e-3021-430c-857c-f2b116eb1e57",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Teller",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Messer",
-      "Gabel",
-      "LÄffel",
-      "Besteck"
-    ]
-  },
-  {
-    "id": "a8398c49-a166-442f-a883-9f73f2601b2c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "KochlÄffel",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Rezept"
-    ]
-  },
-  {
-    "id": "a87c287c-81e3-4b04-bef9-f054bee2a31e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schneidebrett",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "a9071f7a-133d-4a65-a294-12898276c475",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Messer",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "aa4b9641-8e0c-4eaf-8749-f842263ae6a0",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Hose",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Schrank",
-      "Mode",
+      "Fenster",
       "Stoff",
-      "Outfit"
-    ]
+      "Licht",
+      "Salon",
+      "Stange",
+      "Gardine"
+    ],
+    "difficulty": "medium",
+    "norm_target": "vorhang"
   },
   {
-    "id": "aad6b15e-63d8-45c5-bc82-5ea885229b85",
-    "language": "de-CH",
+    "id": "18e98b39-7b5e-4229-b834-0a0e8597a7a1",
+    "target": "Computer",
     "category": "family",
-    "difficulty": "medium",
-    "target": "T-Shirt",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "ae3c43a2-65c4-4863-9275-74027619186b",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Cupcake",
     "forbidden": [
-      "Küche",
-      "Backen",
-      "Süss",
-      "Teig",
-      "Ofen",
-      "Kuchen"
-    ]
-  },
-  {
-    "id": "aebd87ba-4ab6-4822-85eb-a94c539e7eb2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Zahnpasta",
-    "forbidden": [
-      "Zähne",
-      "Putzen",
-      "Bürste",
-      "Mund",
-      "Hygiene"
-    ]
-  },
-  {
-    "id": "b0bdf681-a7c8-47df-9898-a11d75f4b24e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Wohnzimmer",
-    "forbidden": [
-      "Sofa",
-      "Fernsehen",
-      "Abend",
-      "Entspannen",
-      "Film",
-      "Gemeinsam"
-    ]
-  },
-  {
-    "id": "b1aebb46-8d17-4855-ab41-3ac6c1ef7f6b",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Reinigung",
-    "forbidden": [
-      "Haus",
-      "Putzen",
-      "Staubsauger",
-      "Fenster",
-      "Ordnung",
-      "Sauberkeit"
-    ]
-  },
-  {
-    "id": "b923f412-4f0f-4f96-b3be-220edc116b22",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schulbus",
-    "forbidden": [
-      "Schule",
-      "Lernen",
-      "Lehrer",
-      "Kinder",
-      "Tafel",
-      "Pause",
-      "Unterricht"
-    ]
-  },
-  {
-    "id": "b944f903-256c-48e6-8231-c653363f6f5c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Buch",
-    "forbidden": [
-      "Bücher",
-      "Lesen",
-      "Geschichte",
-      "Wissen",
-      "Bibliothek",
-      "Lernen"
-    ]
-  },
-  {
-    "id": "b9731356-bc8d-4d68-bcc7-22d737778e64",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kind",
-    "forbidden": [
-      "Schule",
-      "Freunde",
-      "Hausaufgaben",
-      "Lehrer",
-      "Pause",
-      "Lernen"
-    ]
-  },
-  {
-    "id": "bac21238-30fc-41c6-b028-28e28399eb90",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Medikament",
-    "forbidden": [
-      "Arzt",
-      "Krankheit",
-      "Medikamente",
-      "Gesundheit",
-      "Behandlung",
-      "Fieber"
-    ]
-  },
-  {
-    "id": "bb45e701-8d45-42f4-adb0-2bf67ad77f67",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Backblech",
-    "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Ofen",
-      "Backen",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "bd53de6c-db34-4dec-99d6-f8ceafcc9e33",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Karte",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Buch",
-      "Lesen",
-      "Notizen",
-      "Stift"
-    ]
-  },
-  {
-    "id": "bfb9461c-1296-4d92-93e5-b02c60cd3269",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Pfanne",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Essen",
-      "Herd",
-      "Topf"
-    ]
-  },
-  {
-    "id": "c02548d3-c371-45f4-8dca-eb38c0d55ff1",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Wohnung",
-    "forbidden": [
-      "Haus",
-      "Dach",
-      "Fenster",
-      "Wände",
-      "Zimmer",
-      "Wohnen"
-    ]
-  },
-  {
-    "id": "c0ebcf84-7f59-420a-8c94-84b1009700a9",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Säugling",
-    "forbidden": [
-      "Baby",
-      "Windeln",
-      "Schreien",
-      "Stillen",
-      "Wiegenlied",
-      "Kinderwagen"
-    ]
-  },
-  {
-    "id": "c18ac034-fd16-4cc7-afae-d2dd214b1df8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Esszimmer",
-    "forbidden": [
-      "Kochen",
-      "Essen",
-      "Küche",
-      "Teller",
-      "Rezept",
-      "Herd"
-    ]
-  },
-  {
-    "id": "c4529362-8011-408b-945f-57a558ddc4f2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Eltern",
-    "forbidden": [
-      "Arbeit",
-      "Chef",
-      "Kollegen",
-      "Büro",
-      "Gehalt",
-      "Meeting"
-    ]
-  },
-  {
-    "id": "c53a44ed-909d-484d-8f98-b11d169122f8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Dinner",
-    "forbidden": [
-      "Essen",
-      "Kochen",
-      "Tisch",
-      "Familie",
-      "Abend",
-      "Gemeinsam"
-    ]
-  },
-  {
-    "id": "c7a50cc9-46ab-4b04-adcd-0a249124d664",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Tafel",
-    "forbidden": [
-      "Schule",
-      "Lehrer",
-      "Unterricht",
-      "Kinder",
-      "Lernen",
-      "Hausaufgaben"
-    ]
-  },
-  {
-    "id": "c9c62205-5399-4a26-a53c-0f21a728b12e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Familie",
-    "forbidden": [
-      "Haus",
-      "Eltern",
-      "Kinder",
-      "Gemeinschaft",
-      "Verwandte",
-      "Zusammenleben"
-    ]
-  },
-  {
-    "id": "cab21967-9f27-4ffa-8799-7c5c2aa0b48b",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Trikot",
-    "forbidden": [
-      "Fussball",
-      "Tor",
-      "Spiel",
-      "Ball",
-      "Sport"
-    ]
-  },
-  {
-    "id": "cc0b275d-d975-488e-baab-148853ed2f92",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Roman",
-    "forbidden": [
-      "Buch",
-      "Lesen",
-      "Geschichte",
-      "Seiten",
-      "Autor",
-      "Bibliothek"
-    ]
-  },
-  {
-    "id": "cf1285d5-e2b7-40e0-ba71-ecf966a40e54",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Buntstift",
-    "forbidden": [
-      "Farbe",
-      "Malen",
-      "Pinsel",
-      "Papier",
-      "Kunst"
-    ]
-  },
-  {
-    "id": "d604cf06-b7ab-412a-97e1-05a1cc4f38a1",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Küche",
-    "forbidden": [
-      "Kochen",
-      "Essen",
-      "Tisch",
-      "Abendessen",
-      "Rezept",
-      "Gemeinsam"
-    ]
-  },
-  {
-    "id": "d6fa8ddc-d547-4714-ae21-a6c7e7b78ae1",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kommunikation",
-    "forbidden": [
-      "Telefon",
-      "Anruf",
-      "Nachricht",
-      "Kontakt",
-      "Sprechen",
-      "Reden"
-    ]
-  },
-  {
-    "id": "d907c1e3-535d-4c30-a2ec-c52f4be0bc5d",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Sofa",
-    "forbidden": [
-      "Bett",
-      "Schlafen",
-      "Kissen",
-      "Decke",
-      "Zimmer",
-      "Nacht"
-    ]
-  },
-  {
-    "id": "d998cc5c-50f0-4a7f-9e9c-9bba35c40212",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kochmesser",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Essen",
-      "Herd",
-      "Topf"
-    ]
-  },
-  {
-    "id": "d9b7e457-a230-4b95-85a4-f2ee95aa47b8",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Laptop",
-    "forbidden": [
-      "Computer",
-      "Internet",
+      "Bildschirm",
       "Tastatur",
       "Maus",
-      "Bildschirm",
+      "Internet",
       "Programm",
-      "Tippen"
-    ]
+      "Büro"
+    ],
+    "difficulty": "medium",
+    "norm_target": "computer"
   },
   {
-    "id": "dc73097c-9853-491e-a9d0-c8624afccd90",
-    "language": "de-CH",
+    "id": "1e72fee5-cb7e-4967-8611-40f2cdb82ca3",
+    "target": "Küche",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Backofen",
+    "language": "de-CH",
     "forbidden": [
-      "Küche",
-      "Kochen",
       "Herd",
-      "Topf",
-      "Pfanne"
-    ]
-  },
-  {
-    "id": "dd7d8d59-5a92-494b-8720-1d7ba0edef5c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Spielplatz",
-    "forbidden": [
-      "Spielen",
-      "Kinder",
-      "Freude",
-      "Lachen",
-      "Zeit",
-      "Draussen"
-    ]
-  },
-  {
-    "id": "dd88dcac-9c2f-4956-a025-b0c6a898258e",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schlafplatz",
-    "forbidden": [
-      "Bett",
-      "Kissen",
-      "Decke",
-      "Schlafen",
-      "Nacht",
-      "Zimmer"
-    ]
-  },
-  {
-    "id": "dde110ad-66cd-4843-acc4-92b5db98821f",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Ofen",
-    "forbidden": [
-      "Küche",
       "Kochen",
-      "Essen",
-      "Herd",
-      "Pfanne",
-      "Lebensmittel"
-    ]
-  },
-  {
-    "id": "e184684e-fa2d-4f76-9484-fe063acce8a6",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Herd",
-    "forbidden": [
-      "Küche",
-      "Kochen",
-      "Hitze",
       "Topf",
-      "Essen",
-      "Gericht"
-    ]
+      "Kühlschrank",
+      "Spüle",
+      "Messer"
+    ],
+    "difficulty": "medium",
+    "norm_target": "küche"
   },
   {
-    "id": "e2c08dd2-8c7a-49ed-b3f5-9854ba9042c0",
-    "language": "de-CH",
+    "id": "1fcc9359-2270-4bb6-b400-20ace4aea19f",
+    "target": "Papier",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Handy",
-    "forbidden": [
-      "Telefon",
-      "Anruf",
-      "Sprechen",
-      "Nachricht",
-      "Kontakt",
-      "Kommunikation"
-    ]
-  },
-  {
-    "id": "e3e597bc-4f99-4654-b211-29acb1386454",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Garderobe",
     "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Jacke",
-      "Hose",
-      "Schuhe",
-      "Mode",
-      "Kleider"
-    ]
-  },
-  {
-    "id": "e4daab0b-fe54-4437-a1e1-91702b0946b5",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Hemd",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "e5c64c4c-6707-4e2e-a565-4e170b9835b4",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Tisch",
-    "forbidden": [
+      "Blatt",
       "Schreiben",
+      "Drucker",
+      "Zeitung",
+      "Recycling",
+      "Karton"
+    ],
+    "difficulty": "medium",
+    "norm_target": "papier"
+  },
+  {
+    "id": "222702c9-558a-4ee6-b6a6-e144069002d2",
+    "target": "Toilette",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "WC",
       "Papier",
-      "Stift",
-      "Buch",
-      "Notizen",
-      "Lesen"
-    ]
+      "Tür",
+      "Klospülung",
+      "Waschbecken",
+      "Hygiene"
+    ],
+    "difficulty": "medium",
+    "norm_target": "toilette"
   },
   {
-    "id": "e7f861a3-069c-49b8-b020-2b752c342126",
-    "language": "de-CH",
+    "id": "231360ae-ec00-487a-87e9-3e54c399a863",
+    "target": "Wohnung",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Schuh",
-    "forbidden": [
-      "Kleidung",
-      "Anziehen",
-      "Hose",
-      "Beine",
-      "Tasche",
-      "Gürtel"
-    ]
-  },
-  {
-    "id": "e912d67b-9fb2-4c20-a393-780142475751",
     "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "MÄrser",
     "forbidden": [
-      "Küche",
-      "Essen",
-      "Kochen",
-      "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "e935de98-c4a4-438b-8249-56ba8b55b4e2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Zeitung",
-    "forbidden": [
-      "Schreiben",
-      "Papier",
-      "Buch",
-      "Lesen",
-      "Notizen",
-      "Stift"
-    ]
-  },
-  {
-    "id": "f128d43c-792c-4829-8c56-07fc522b259d",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Kindergarten",
-    "forbidden": [
-      "Baby",
-      "Windeln",
-      "Schreien",
-      "Flasche",
-      "Schlaf",
-      "Pflege"
-    ]
-  },
-  {
-    "id": "f1e638e5-f57e-4188-9b04-f2c71f0ec662",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Zucker",
-    "forbidden": [
-      "Küche",
-      "Backen",
-      "Süss",
-      "Teig",
-      "Ofen",
-      "Kuchen"
-    ]
-  },
-  {
-    "id": "f66fad79-c037-412f-b916-a2b498002cdc",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Meerschweinchen",
-    "forbidden": [
-      "Tier",
-      "Hund",
-      "Katze",
-      "Haustier",
-      "Bellen",
-      "Miau",
-      "Pfote"
-    ]
-  },
-  {
-    "id": "f8939b93-4e59-4d9f-90ee-b38f5af5f1a7",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schulhof",
-    "forbidden": [
-      "Schule",
-      "Lehrer",
-      "Lernen",
-      "Kinder",
-      "Unterricht",
-      "Hausaufgaben"
-    ]
-  },
-  {
-    "id": "fa5a2bfb-e690-4700-82d3-6929fa568be2",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Schlafanzug",
-    "forbidden": [
-      "Bett",
-      "Müde",
-      "Schlafen",
-      "Nacht",
-      "Kissen",
-      "Decke"
-    ]
-  },
-  {
-    "id": "fc0fad89-e969-433d-8e60-635559dcf08c",
-    "language": "de-CH",
-    "category": "family",
-    "difficulty": "medium",
-    "target": "Tapete",
-    "forbidden": [
-      "Farbe",
-      "Wand",
+      "Miete",
       "Zimmer",
-      "Streichen",
-      "Pinsel"
-    ]
+      "Küche",
+      "Wohnzimmer",
+      "Balkon",
+      "Haustür"
+    ],
+    "difficulty": "medium",
+    "norm_target": "wohnung"
   },
   {
-    "id": "fd799870-4f0a-469e-85ba-db6b82c93b79",
-    "language": "de-CH",
+    "id": "27a3d83a-30f0-4dc2-92c5-b027852d67c3",
+    "target": "Wecker",
     "category": "family",
-    "difficulty": "medium",
-    "target": "LÄffel",
+    "language": "de-CH",
     "forbidden": [
-      "Küche",
-      "Essen",
+      "Alarm",
+      "Sonntag",
+      "Klingeln",
+      "Schlafen",
+      "Snooze",
+      "Ticken"
+    ],
+    "difficulty": "medium",
+    "norm_target": "wecker"
+  },
+  {
+    "id": "2948d870-36e0-4382-b018-994c6c6a4876",
+    "target": "Bahnhof",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Zug",
+      "Gleis",
+      "Tickets",
+      "Halle",
+      "Fahrplan",
+      "Vorplatz"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bahnhof"
+  },
+  {
+    "id": "29f5d95c-bf00-49a0-bd6b-4c5e73e80fc2",
+    "target": "Topf",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
       "Kochen",
       "Herd",
       "Pfanne",
-      "Lebensmittel"
-    ]
+      "Pflanzen",
+      "Deckel",
+      "Suppe"
+    ],
+    "difficulty": "medium",
+    "norm_target": "topf"
   },
   {
-    "id": "fde5ef3b-3ea3-47ed-94b8-af3426ce1544",
-    "language": "de-CH",
+    "id": "2c305d7a-ae0a-49a4-8659-573b5c9574ed",
+    "target": "Kühlschrank",
     "category": "family",
-    "difficulty": "medium",
-    "target": "Dampfgarer",
+    "language": "de-CH",
     "forbidden": [
+      "Kalt",
+      "Lebensmittel",
+      "Tür",
+      "Gefrierfach",
+      "Milch",
+      "Strom"
+    ],
+    "difficulty": "medium",
+    "norm_target": "kühlschrank"
+  },
+  {
+    "id": "30206455-401a-491e-b8fb-4cac321c69a7",
+    "target": "Bild",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Rahmen",
+      "Foto",
+      "Malen",
+      "Wand",
+      "Poster",
+      "Kunst"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bild"
+  },
+  {
+    "id": "38882fa6-3b9a-493e-ada1-4e1de96c4eaf",
+    "target": "Waschmaschine",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Schmutz",
+      "Waschmittel",
+      "Trommel",
+      "Trocknen",
+      "Knopf",
+      "Schleudern"
+    ],
+    "difficulty": "medium",
+    "norm_target": "waschmaschine"
+  },
+  {
+    "id": "3a2751c4-2bbf-4adf-b3dc-b7caa5273da6",
+    "target": "Drucker",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Papier",
+      "Tinte",
+      "Kopie",
+      "USB",
+      "Scan",
+      "Büro"
+    ],
+    "difficulty": "medium",
+    "norm_target": "drucker"
+  },
+  {
+    "id": "3bb6491f-3002-4dcb-b608-92c3e6d33af3",
+    "target": "Zahn",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Mund",
+      "Karies",
+      "Bohrer",
+      "Putzen",
+      "Weiss"
+    ],
+    "difficulty": "medium",
+    "norm_target": "zahn"
+  },
+  {
+    "id": "3cc12ded-7bd8-4c49-b633-49e591bf0f1e",
+    "target": "Würfel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Spiel",
+      "Sechs",
+      "Zufall",
+      "Casino",
+      "Glück",
+      "Zahl"
+    ],
+    "difficulty": "medium",
+    "norm_target": "würfel"
+  },
+  {
+    "id": "3e687823-215d-4ebd-a568-e61ea3ce2bf4",
+    "target": "Rucksack",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Wandern",
+      "Schulter",
+      "Packen",
+      "Reissen",
+      "Schule",
+      "Reis"
+    ],
+    "difficulty": "medium",
+    "norm_target": "rucksack"
+  },
+  {
+    "id": "470d357e-5375-4fbb-8741-e58e75d74ac4",
+    "target": "Zeitung",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Artikel",
+      "Rubrik",
+      "Abo",
+      "Druck",
+      "Morgen"
+    ],
+    "difficulty": "medium",
+    "norm_target": "zeitung"
+  },
+  {
+    "id": "4caff1f2-a8a8-443d-b0f5-308164aed63f",
+    "target": "Karte",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Spiel",
+      "Post",
+      "Menü",
+      "Einladung",
+      "Adresse"
+    ],
+    "difficulty": "medium",
+    "norm_target": "karte"
+  },
+  {
+    "id": "532097d7-a633-4188-953b-e4f1e0efd573",
+    "target": "Stempel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Post",
+      "Papier",
+      "Tinte",
+      "Druck",
+      "Abdruck",
+      "Büro"
+    ],
+    "difficulty": "medium",
+    "norm_target": "stempel"
+  },
+  {
+    "id": "53bce41e-e65a-479d-863c-fcf45d4cc099",
+    "target": "Portemonnaie",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Geld",
+      "Karten",
+      "Leder",
+      "Verlust",
+      "Münzen"
+    ],
+    "difficulty": "medium",
+    "norm_target": "portemonnaie"
+  },
+  {
+    "id": "54fba220-fa3b-4444-ae38-f5353582b197",
+    "target": "Heft",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Schreiben",
+      "Deckel",
+      "Spiral",
+      "Linien",
+      "Feder"
+    ],
+    "difficulty": "medium",
+    "norm_target": "heft"
+  },
+  {
+    "id": "5687ffba-0e0a-4044-8b18-37b8c3072e54",
+    "target": "Kamera",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Foto",
+      "Objektiv",
+      "Film",
+      "Knopf",
+      "Stativ",
+      "Blitz"
+    ],
+    "difficulty": "medium",
+    "norm_target": "kamera"
+  },
+  {
+    "id": "57e62d74-9e79-45da-b5a8-acb0e604c9ef",
+    "target": "Klavier",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Tasten",
+      "Flügel",
+      "Musik",
+      "Konzert",
+      "Pedal",
+      "Piano"
+    ],
+    "difficulty": "medium",
+    "norm_target": "klavier"
+  },
+  {
+    "id": "5a043a91-1518-4a4e-986c-c5530f490160",
+    "target": "Theater",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Bühne",
+      "Schauspiel",
+      "Publikum",
+      "Ticket",
+      "Kostüm",
+      "Drama"
+    ],
+    "difficulty": "medium",
+    "norm_target": "theater"
+  },
+  {
+    "id": "5fe72bfc-6ec7-4539-abb6-4a7a302ae29a",
+    "target": "Käse",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Milch",
+      "Reiben",
+      "Stück",
+      "Fondue",
+      "Geruch",
+      "Geschmack"
+    ],
+    "difficulty": "medium",
+    "norm_target": "käse"
+  },
+  {
+    "id": "634c1576-39bf-4fe5-bbe4-9a000e49b1b5",
+    "target": "Finger",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Daumen",
+      "Nagel",
+      "Tippen",
+      "Greifen",
+      "Ring"
+    ],
+    "difficulty": "medium",
+    "norm_target": "finger"
+  },
+  {
+    "id": "6a91d396-7525-4fd2-9fde-7e95841c92c2",
+    "target": "Regal",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Bücher",
+      "Wand",
+      "Holz",
+      "Ablage",
+      "Ordnung",
+      "Montage"
+    ],
+    "difficulty": "medium",
+    "norm_target": "regal"
+  },
+  {
+    "id": "6ac85ceb-16d7-48ec-97f4-61ac0ece0cd5",
+    "target": "Tanz",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Salsa",
+      "Ball",
+      "Rhythmus",
+      "Beine",
+      "Partner",
+      "Musik"
+    ],
+    "difficulty": "medium",
+    "norm_target": "tanz"
+  },
+  {
+    "id": "6d96b9a9-a304-422c-887b-ac47b92724ec",
+    "target": "Kino",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Film",
+      "Popcorn",
+      "Saal",
+      "Eintritt",
+      "Sitz",
+      "Ticket"
+    ],
+    "difficulty": "medium",
+    "norm_target": "kino"
+  },
+  {
+    "id": "6e5aed34-33cc-4dc5-9530-7e565656426c",
+    "target": "Kalender",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Datum",
+      "Monat",
+      "Wand",
+      "Jahr",
+      "Feiertag",
+      "Planer"
+    ],
+    "difficulty": "medium",
+    "norm_target": "kalender"
+  },
+  {
+    "id": "71acbf6c-4b82-40c7-98f3-d86990fd5eb1",
+    "target": "Stift",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Schreiben",
+      "Kuli",
+      "Bleistift",
+      "Tinte",
+      "Papier",
+      "Kappe"
+    ],
+    "difficulty": "medium",
+    "norm_target": "stift"
+  },
+  {
+    "id": "71af66f2-79c0-4800-8d12-4ced490be821",
+    "target": "Haus",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Wohnung",
+      "Tür",
+      "Fenster",
+      "Dach",
+      "Garten",
+      "Schlüssel"
+    ],
+    "difficulty": "medium",
+    "norm_target": "haus"
+  },
+  {
+    "id": "720309d8-7a7c-4e63-82a5-942ac74f7e93",
+    "target": "Mixer",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Rühren",
+      "Smoothie",
       "Küche",
+      "Messer",
+      "Glas",
+      "Stand"
+    ],
+    "difficulty": "medium",
+    "norm_target": "mixer"
+  },
+  {
+    "id": "7a2b0a99-b540-4e6d-b6cc-4aac9cec4be8",
+    "target": "Bad",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Dusche",
+      "WC",
+      "Badewanne",
+      "Handtuch",
+      "Spiegel",
+      "Seife"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bad"
+  },
+  {
+    "id": "7c8c3ee8-53f6-41d0-843f-e488519eb05d",
+    "target": "Kerze",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Wachs",
+      "Flamme",
+      "Licht",
+      "Geburtstag",
+      "Duft",
+      "Streichholz"
+    ],
+    "difficulty": "medium",
+    "norm_target": "kerze"
+  },
+  {
+    "id": "7d74fa49-7931-4ce3-94af-141ccaed4fc5",
+    "target": "Zug",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Gleis",
+      "Bahnhof",
+      "Waggon",
+      "Lokomotive",
+      "Fahrplan",
+      "Ticket"
+    ],
+    "difficulty": "medium",
+    "norm_target": "zug"
+  },
+  {
+    "id": "7f263a1c-662b-4fa7-851f-c28f3d6c465b",
+    "target": "Foto",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Kamera",
+      "Bild",
+      "Album",
+      "Erinnerungen",
+      "Drucken",
+      "Entwicklung"
+    ],
+    "difficulty": "medium",
+    "norm_target": "foto"
+  },
+  {
+    "id": "824ea2fe-efc4-4305-a6ed-7abd8fdfaea9",
+    "target": "Pause",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Unterricht",
+      "Snack",
+      "Spiel",
+      "Klingel",
+      "Erholung"
+    ],
+    "difficulty": "medium",
+    "norm_target": "pause"
+  },
+  {
+    "id": "82b107c6-9e63-4c2e-a3a1-688643ae1ce8",
+    "target": "Bus",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Haltestelle",
+      "Linie",
+      "Fahrer",
+      "Fahrkarte",
+      "Stadt",
+      "Sitz"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bus"
+  },
+  {
+    "id": "868827e5-0893-4bfc-846b-424aa291968e",
+    "target": "Ofen",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Backen",
+      "Hitze",
+      "Kuchen",
+      "Herd",
+      "Bäcker",
+      "Feuer"
+    ],
+    "difficulty": "medium",
+    "norm_target": "ofen"
+  },
+  {
+    "id": "87163acf-89d9-4956-9243-cccc1cb82cf9",
+    "target": "Tafel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Kreide",
+      "Lehrer",
+      "Schreiben",
+      "Magnet",
+      "Schule"
+    ],
+    "difficulty": "medium",
+    "norm_target": "tafel"
+  },
+  {
+    "id": "886de93a-af49-4bbe-9f01-9c5df9429018",
+    "target": "Schachtel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Karton",
+      "Deckel",
+      "Verpackung",
+      "Geschenk",
+      "Stauraum",
+      "Pappe"
+    ],
+    "difficulty": "medium",
+    "norm_target": "schachtel"
+  },
+  {
+    "id": "8b490ada-301e-42e8-87c1-57ec12dd8759",
+    "target": "Öl",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Braten",
+      "Salat",
+      "Flasche",
+      "Tropfen",
+      "Küche",
+      "Motor"
+    ],
+    "difficulty": "medium",
+    "norm_target": "öl"
+  },
+  {
+    "id": "91e867d4-6a0b-4c38-b325-107b4ac09895",
+    "target": "Film",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Kino",
+      "Kamera",
+      "Popcorn",
+      "Genre",
+      "Licht",
+      "Schauspieler"
+    ],
+    "difficulty": "medium",
+    "norm_target": "film"
+  },
+  {
+    "id": "95c45deb-2f1e-4be0-bdcb-fe8c456bbcdf",
+    "target": "Party",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Musik",
+      "Freunde",
+      "Geburtstag",
+      "Tanz",
       "Essen",
+      "Spielen"
+    ],
+    "difficulty": "medium",
+    "norm_target": "party"
+  },
+  {
+    "id": "95d16db8-6a00-4d53-ad9a-af9e331c5c9f",
+    "target": "Geschenk",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Paket",
+      "Schleife",
+      "Geburtstag",
+      "Überraschen",
+      "Geschenkpapier",
+      "Kaufen"
+    ],
+    "difficulty": "medium",
+    "norm_target": "geschenk"
+  },
+  {
+    "id": "99fd9661-afe7-48c8-9637-096a58fe30e4",
+    "target": "Tasche",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Schulter",
+      "Rucksack",
+      "Reissverschluss",
+      "Inhalt",
+      "Tragen",
+      "Henkel"
+    ],
+    "difficulty": "medium",
+    "norm_target": "tasche"
+  },
+  {
+    "id": "a198b139-688a-4ce4-a52c-fd9e4013d705",
+    "target": "Bleistift",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Schreiben",
+      "Mine",
+      "Holz",
+      "Spitzer",
+      "Radiergummi",
+      "Druck"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bleistift"
+  },
+  {
+    "id": "a86ee9b0-1201-48c3-a178-f743b90a28b1",
+    "target": "Bauch",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Essen",
+      "Schmerzen",
+      "Situps",
+      "Gefühl",
+      "Baby",
+      "Taille"
+    ],
+    "difficulty": "medium",
+    "norm_target": "bauch"
+  },
+  {
+    "id": "ae18a404-4b58-49cf-9f5a-f8cbb9af35ad",
+    "target": "Musik",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Melodie",
+      "Instrument",
+      "Konzert",
+      "Laut",
+      "Tanzen",
+      "Lied"
+    ],
+    "difficulty": "medium",
+    "norm_target": "musik"
+  },
+  {
+    "id": "af0ef138-ee35-4750-8a89-1562c183cbec",
+    "target": "Pfanne",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Braten",
+      "Öl",
+      "Herd",
+      "Spiegelei",
+      "Beschichtung",
+      "Griff"
+    ],
+    "difficulty": "medium",
+    "norm_target": "pfanne"
+  },
+  {
+    "id": "b5457282-6671-47bd-a577-db6a0102db8b",
+    "target": "Schuh",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Fuss",
+      "Sohle",
+      "Schnürsenkel",
+      "Leder",
+      "Anziehen",
+      "Paar"
+    ],
+    "difficulty": "medium",
+    "norm_target": "schuh"
+  },
+  {
+    "id": "b827c079-ff3c-4ce9-9d4e-ee3a436197d8",
+    "target": "Tastatur",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Tasten",
+      "Tippen",
+      "PC",
+      "Kabel",
+      "Maus",
+      "Laptop"
+    ],
+    "difficulty": "medium",
+    "norm_target": "tastatur"
+  },
+  {
+    "id": "bd6d9bee-ed29-4e2f-a7a7-755ee58cdad8",
+    "target": "Löffel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Suppe",
+      "Frühstück",
+      "Besteck",
+      "Tee",
+      "Salat"
+    ],
+    "difficulty": "medium",
+    "norm_target": "löffel"
+  },
+  {
+    "id": "c81841b8-1315-4aaf-9379-0306c1411b6c",
+    "target": "Arzt",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Klinik",
+      "Patient",
+      "Rezept",
+      "Untersuchung",
+      "Krankenhaus",
+      "Medizin"
+    ],
+    "difficulty": "medium",
+    "norm_target": "arzt"
+  },
+  {
+    "id": "cb34d06e-58f9-4609-a517-6aee270e83d7",
+    "target": "Mikrowelle",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Erhitzen",
+      "Drehteller",
+      "Küche",
+      "Strom",
+      "Schnell",
+      "Teller"
+    ],
+    "difficulty": "medium",
+    "norm_target": "mikrowelle"
+  },
+  {
+    "id": "cdea0194-4de6-4be6-8aeb-ddd3a5e8c811",
+    "target": "Taschenrechner",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Zahlen",
+      "Batterie",
+      "Bildschirm",
+      "Knopf",
+      "Schule",
+      "Formel"
+    ],
+    "difficulty": "medium",
+    "norm_target": "taschenrechner"
+  },
+  {
+    "id": "cf41333e-347f-4ae0-a488-1a6f42cca315",
+    "target": "Gesicht",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Augen",
+      "Mund",
+      "Nase",
+      "Maske",
+      "Haut",
+      "Ausdruck"
+    ],
+    "difficulty": "medium",
+    "norm_target": "gesicht"
+  },
+  {
+    "id": "d45d3f90-e609-4fad-8a7b-db0a727eb640",
+    "target": "Hut",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Kopf",
+      "Sonne",
+      "Regen",
+      "Kappe",
+      "Mode",
+      "Feder"
+    ],
+    "difficulty": "medium",
+    "norm_target": "hut"
+  },
+  {
+    "id": "e0065f89-63a6-4690-9d9d-90565f9ee508",
+    "target": "Radio",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Musik",
+      "Sender",
+      "Laut",
+      "Nachrichten",
+      "Fernsehen",
+      "Antenne"
+    ],
+    "difficulty": "medium",
+    "norm_target": "radio"
+  },
+  {
+    "id": "e159f1e0-a695-4fa3-a930-3914a7d5263e",
+    "target": "Pflanze",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Giessen",
+      "Topf",
+      "Blume",
+      "Blatt",
+      "Wurzel",
+      "Balkon"
+    ],
+    "difficulty": "medium",
+    "norm_target": "pflanze"
+  },
+  {
+    "id": "e50d2368-9763-4ea6-b658-0f470ed68d01",
+    "target": "Mund",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Essen",
+      "Lippen",
+      "Zunge",
+      "Sprechen",
+      "Zahn",
+      "Lachen"
+    ],
+    "difficulty": "medium",
+    "norm_target": "mund"
+  },
+  {
+    "id": "e84862c0-1472-471c-955a-d4cf5b5bc37f",
+    "target": "Brett",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Holz",
+      "Spiel",
+      "Schach",
+      "Tisch",
+      "Säge"
+    ],
+    "difficulty": "medium",
+    "norm_target": "brett"
+  },
+  {
+    "id": "ecb57d57-cf6d-4a51-aefa-f43c25d40dde",
+    "target": "Balkon",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Geländer",
+      "Pflanzen",
+      "Stadtblick",
+      "Stuhl",
+      "Blumen",
+      "Sonne"
+    ],
+    "difficulty": "medium",
+    "norm_target": "balkon"
+  },
+  {
+    "id": "ef54df93-ddec-48c7-8368-d1287d787e57",
+    "target": "Sessel",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Armlehne",
+      "Wohnzimmer",
+      "Lesen",
+      "Komfort",
+      "Polster",
+      "Bein"
+    ],
+    "difficulty": "medium",
+    "norm_target": "sessel"
+  },
+  {
+    "id": "fae614a0-824d-43d9-9d14-c37c712f4eb0",
+    "target": "Becher",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
+      "Einweg",
+      "Trinken",
+      "Kaffee",
+      "Deckel",
+      "Plastik"
+    ],
+    "difficulty": "medium",
+    "norm_target": "becher"
+  },
+  {
+    "id": "ff1e2b61-aa5d-4315-a7d5-5713d8d2bbe0",
+    "target": "Herd",
+    "category": "family",
+    "language": "de-CH",
+    "forbidden": [
       "Kochen",
       "Topf",
-      "Pfanne",
-      "Hitze"
-    ]
-  },
-  {
-    "id": "fe3e2b47-671d-4faf-8646-c6482335059f",
-    "language": "de-CH",
-    "category": "family",
+      "Gas",
+      "Platte",
+      "Ofen",
+      "Pfanne"
+    ],
     "difficulty": "medium",
-    "target": "Ferien",
-    "forbidden": [
-      "Auto",
-      "Fahren",
-      "Reise",
-      "Straße",
-      "Urlaub",
-      "Koffer"
-    ]
+    "norm_target": "herd"
   }
 ]
